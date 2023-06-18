@@ -1,0 +1,164 @@
+.parent {
+    margin: auto;
+    width: 500px;
+    height: 150px;
+    border: 2px solid black;
+    padding: 5px;
+} 
+
+.parent .child {
+    width: 75%;
+    height: 75%;
+    position: relative;
+    font-size: 30px;
+}
+
+.parent:hover .child {
+    animation: moving 5s infinite;
+}
+
+@keyframes moving {
+    0% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateX(100%) translateY(100%);
+    }
+    75% {
+        transform: translateX(100%) translateY(0%)
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+nav {
+    display: flex;
+    background-color: lightblue;
+    justify-items: center;
+    justify-content: space-between;
+    height: 40px;
+    top: 0;
+}
+
+.current {
+    color: darkblue;
+}
+
+#drop-down-icon {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTk7z6qSJdV8wmm0xwR4nrK5OPwhOfXJPqzrIG3ynOlOoGHyc4PSyrvpQ') center;
+    background-size: contain;
+}
+
+nav ul {
+    margin-top: 10px;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0px 20px;
+    border-bottom: 2px solid red;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background-color: lightgreen;
+    border: 2px solid red;
+}
+
+nav img {
+    width: auto;
+    background-color: red;
+}
+
+nav form {
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+}
+
+nav form button img {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: white;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+h1 {
+    font-family: 'Comforter', cursive, sans-serif;
+    text-align: center;
+    background-color: lightgreen;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px red;
+}
+
+p {
+    font-family: 'Dancing Script', cursive, sans-serif;
+}
+
+@media only screen and (max-width : 768px) {
+
+    nav ul {
+        display: none;
+    }
+    
+    header nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		background: #fff;	
+        top: 20px;	
+		border: 5px solid #000;
+		width: 100%;
+        padding: 0;
+	}
+
+    footer nav ul, nav:active ul {
+        display: none;
+		position: absolute;
+		background: #fff;	
+        bottom: 20px;	
+		border: 5px solid #000;
+		width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+		text-align: center;
+		width: 100%;
+		margin: 0;
+		padding: 20px 0 20px 0;
+		background-color: lightblue;
+		border-bottom: 5px solid black;
+	}
+
+    nav li:last-of-type {
+		border-bottom: 0px;
+	}
+
+    #drop-down-icon {
+        display: inline-block;
+    }  
+
+    nav:hover ul {
+        display: block;
+    }
+
+}
